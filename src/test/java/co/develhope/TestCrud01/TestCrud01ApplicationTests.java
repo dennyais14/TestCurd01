@@ -2,7 +2,6 @@ package co.develhope.TestCrud01;
 
 import co.develhope.TestCrud01.controller.StudentController;
 import co.develhope.TestCrud01.entities.Student;
-import co.develhope.TestCrud01.repositories.StudentRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +26,6 @@ class TestCrud01ApplicationTests {
 
 	@Autowired
 	private StudentController studentController;
-
-	@Autowired
-	private StudentRepository studentRepository;
 
 	@Autowired
 	private MockMvc mockMvc;

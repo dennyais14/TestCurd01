@@ -15,9 +15,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class StudentServiceTest {
 
     @Autowired
-    private Student student;
-
-    @Autowired
     private StudentRepository studentRepository;
 
     @Autowired
@@ -39,10 +36,6 @@ public class StudentServiceTest {
         assertThat(studentFromService.getId()).isNotNull();
         assertThat(studentFromService.isWorking()).isTrue();
 
-    }
-
-    @Test
-    void findById(Student studentFromDB, Student studentFromService) {
         Student studentFromFind = studentRepository.findById(studentFromDB.getId()).get();
         assertThat(studentFromFind).isNotNull();
         assertThat(studentFromFind.getId()).isNotNull();
